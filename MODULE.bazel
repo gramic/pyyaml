@@ -1,0 +1,25 @@
+module(
+    name = "pyyaml",
+    version = "0.0.0-6.0",
+    compatibility_level = 1,
+)
+
+#####################################################################
+# Python
+#####################################################################
+
+bazel_dep(name = "rules_python", version = "0.19.0")
+
+# (Optional) Register a specific python toolchain instead of using the host version
+# python = use_extension("@rules_python//python:extensions.bzl", "python")
+# python.toolchain(
+#     name = "python3_9",
+#     python_version = "3.9",
+# )
+# use_repo(python, "python3_9_toolchains")
+
+# register_toolchains(
+#     "@python3_9_toolchains//:all",
+# )
+
+
